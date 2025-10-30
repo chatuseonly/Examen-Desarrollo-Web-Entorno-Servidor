@@ -47,7 +47,7 @@ class Articulo{
     //Método mágico __toString()
 
     public function __toString(){
-        return "Nombre:" . $this -> nombre . "<br>" . ""
+        return "Nombre:" . $this -> nombre . "<br>" . "Precio: " . $this -> precio . "<br>" . "Disponibilidad: " . $this -> disponibilidad . "<br>" . "Categoría: " . $this -> categoria . "<br>"; 
     }
   
 }
