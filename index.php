@@ -1,5 +1,7 @@
 <?php
 // TODO Importar las clases
+require_once("./model/Articulo.php");
+require_once("./model/Bebida.php");
 
 // Array asociativo del menú
 $menu = [
@@ -31,6 +33,10 @@ $ubicaciones = [
         "horario" => "10:00 - 23:00"
     ]
 ];
+//Declaración del array $articulos
+$articulos = [];
+
+
 
 $pedido = ["Ensalada César", "Pizza Margarita", "Café"];
 
