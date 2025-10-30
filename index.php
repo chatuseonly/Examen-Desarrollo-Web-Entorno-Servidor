@@ -36,12 +36,15 @@ $ubicaciones = [
 //Declaración del array $articulos
 $articulos = [];
 
+//Declaracion del array $ubicaciones
+$ubicaciones = [];
 
 
+//Declaración del array $pedido
 $pedido = ["Ensalada César", "Pizza Margarita", "Café"];
 
 // TODO Filtrar platos por disponibilidad, guardando en variable $disponibles
-$disponibles =
+$disponibles = array_filter($)
 
 //////////////////////////////
 //        FUNCIONES         //
