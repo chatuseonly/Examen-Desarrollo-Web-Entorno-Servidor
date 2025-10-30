@@ -16,23 +16,25 @@ $menu = [
     new Bebida("Jugo de Naranja", 3.00, false, "Bebida", "Mediano", "Fría") // No disponible
 ];
 
-$ubicaciones = [
-    "Centro" => [
-        "direccion" => "Calle Mayor 123, Centro",
-        "telefono" => "123-456-789",
-        "horario" => "10:00 - 22:00"
-    ],
-    "Norte" => [
-        "direccion" => "Avenida Norte 456, Zona Norte",
-        "telefono" => "987-654-321",
-        "horario" => "11:00 - 20:00"
-    ],
-    "Sur" => [
-        "direccion" => "Boulevard Sur 789, Zona Sur",
-        "telefono" => "654-321-987",
-        "horario" => "10:00 - 23:00"
-    ]
-];
+$articulo =
+
+    $ubicaciones = [
+        "Centro" => [
+            "direccion" => "Calle Mayor 123, Centro",
+            "telefono" => "123-456-789",
+            "horario" => "10:00 - 22:00"
+        ],
+        "Norte" => [
+            "direccion" => "Avenida Norte 456, Zona Norte",
+            "telefono" => "987-654-321",
+            "horario" => "11:00 - 20:00"
+        ],
+        "Sur" => [
+            "direccion" => "Boulevard Sur 789, Zona Sur",
+            "telefono" => "654-321-987",
+            "horario" => "10:00 - 23:00"
+        ]
+    ];
 //Declaración del array $articulos
 $articulos = [];
 
@@ -40,29 +42,56 @@ $articulos = [];
 $ubicaciones = [];
 
 
+
 //Declaración del array $pedido
 $pedido = ["Ensalada César", "Pizza Margarita", "Café"];
 
 // TODO Filtrar platos por disponibilidad, guardando en variable $disponibles
-$disponibles = array_filter($)
+$disponibles = array_filter($menu, function ($men) {});
 
 //////////////////////////////
 //        FUNCIONES         //
 //////////////////////////////
 
 // TODO Función para imprimir una lista de artículos con nombre y precio
-function imprimirListaArticulos($articulos){
-
+function imprimirListaArticulos($articulos)
+{
+    foreach ($articulos as $articulo => $elementos) {
+        if ($elementos["disponibilidad"] == true) {
+            echo "<li>";
+            echo $articulo["nombre"];
+            echo $articulo["precio"];
+            echo $articulo["categoria"];
+            echo "</li>";
+        } else {
+            echo "<li>";
+            echo "Artículo no disponible";
+            echo "</li>";
+        }
+    }
 }
 
 // TODO Función para imprimir un pedido
-function imprimirPedido($pedido, $menu) {
-
+function imprimirPedido($pedido, $menu)
+{
+    foreach ($pedido as $pedi) {
+        foreach ($menu as $men => $elementos) {
+            echo $pedi;
+        }
+    }
 }
+
 
 // TODO Función para imprimir las ubicaciones
 function imprimirUbicaciones($ubicaciones) {
-
+    foreach($ubicaciones as $ubicacion => $elementos){
+        echo"<li>";
+        echo $ubicacion;
+        echo $elementos["direccion"];
+        echo $elementos["telefono"];
+        echo $elementos["horario"];
+        echo "</li>";
+    }
 }
 
 ?>

@@ -7,6 +7,7 @@ class Bebida extends Articulo{
      public function __construct($tamano, $temperatura, $nombre, $precio, $disponibilidad, $categoria){
         parent::__construct($nombre, $precio, $disponibilidad, $categoria);
         $this -> tamano = $tamano;
+        $this -> $temperatura;
      }
 
      //GETTERS
