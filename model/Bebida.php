@@ -1,13 +1,14 @@
 <?php
 // Clase Bebida que hereda de Artículo
 class Bebida extends Articulo{
-     private $tamano;
-     private $temperatura;
+     public $tamano;
+     public $temperatura;
      
      public function __construct($tamano, $temperatura, $nombre, $precio, $disponibilidad, $categoria){
         parent::__construct($nombre, $precio, $disponibilidad, $categoria);
         $this -> tamano = $tamano;
-        $this -> $temperatura;
+        $this -> $temperatura = $temperatura;
+        
      }
 
      //GETTERS
@@ -24,6 +25,11 @@ class Bebida extends Articulo{
      public function setTamano($tamano){
         $this -> tamano = $tamano;
         return $this;
+     }
+
+     public function setTemperatura($temperatura){
+      $this -> temperatura = $temperatura;
+      return $this;
      }
 
      //Método mágico __toString()

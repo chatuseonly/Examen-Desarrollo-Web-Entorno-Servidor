@@ -2,10 +2,10 @@
 // Clase Artículo
  class Articulo{
  
-    protected $nombre;
-    protected $precio;
-    protected $disponibilidad;
-    protected $categoria;
+    public $nombre;
+    public $precio;
+    public $disponibilidad;
+    public $categoria;
 
     public function __construct($nombre, $precio, $disponibilidad, $categoria){
         $this -> nombre = $nombre;
