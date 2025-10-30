@@ -14,4 +14,40 @@ class Articulo{
         $this -> categoria = $categoria;
     }
 
-    
+    //GETTERS
+    public function getNombre(){
+        return $this -> nombre;
+    }
+
+    public function getPrecio(){
+        return $this -> precio;
+    }
+
+    public function getCategoria(){
+        return $this -> categoria;
+    }
+
+    //SETTERS
+
+    public function setNombre($nombre){
+        $this -> nombre = $nombre;
+        return $this;
+    }
+
+    public function setPrecio($precio){
+        $this -> precio = $precio;
+        return $this;
+    }
+
+    public function setDisponibilidad($disponibilidad){
+        $this -> disponibilidad = $disponibilidad;
+        return $this;
+    }
+
+    //Método mágico __toString()
+
+    public function __toString(){
+        return "Nombre:" . $this -> nombre . "<br>" . ""
+    }
+  
+}
