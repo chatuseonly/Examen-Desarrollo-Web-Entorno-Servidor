@@ -15,7 +15,7 @@ class Bebida extends Articulo{
      }
 
      public function getTemperatura(){
-        return $this 
+        return $this -> temperatura;
      }
 
      //SETTERS
@@ -28,7 +28,7 @@ class Bebida extends Articulo{
      //Método mágico __toString()
 
      public function __toString(){
-        return "Tamaño" . $this -> tamano . "<br>";
+        return "Tamaño" . $this -> tamano . "<br>" . "Temperatura: " . $this -> temperatura . "<br>";
      }
 
 
